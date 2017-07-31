@@ -1,0 +1,14 @@
+.active-link {
+	background-color: $active-color;
+	color: $active-color-light;
+}
+
+.active-item:before {
+	content: '';
+	display: block;
+	background-color: $active-color;
+	width: 5px;
+	height: 3em;
+	position: absolute;
+	left: -5%;
+}

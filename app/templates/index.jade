@@ -1,0 +1,15 @@
+html(lang="eng")
+    head
+        title test_UI
+        meta(charset="UTF-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        include components/links
+    body(ng-app="myapp" ng-controller='mainCtrl as my')
+        #layout.content
+                include components/header
+                include views/main 
+            
+        script( src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
+        script( src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js")
+        script( src='js/main.js')

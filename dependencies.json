@@ -1,0 +1,12 @@
+{
+  "js": [
+    "./node_modules/jquery/dist/jquery.js",
+    "./app/js/app.js",
+    "./app/js/controllers/mainCtrl.js",
+    "./app/js/userServices/localStorage.js"
+  ],
+  "css": [
+  ],
+  "fonts": [
+  ]
+}

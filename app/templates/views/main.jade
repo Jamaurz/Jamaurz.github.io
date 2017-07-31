@@ -1,0 +1,30 @@
+main#main.grid-g    
+    .pure-u-1.pure-u-md-1-2
+        .pure-box-item
+            h2 Items
+            form.pure-form
+                .pure-g
+                    .pure-u-1.pure-u-md-3-5
+                        input(type='text' ng-model='my.newItem' placeholder='Type name here...')
+                    .pure-u-1.pure-u-md-2-5
+                        input.pure-button.pure-button-blue(type='button' value='Add new' ng-click='my.addNew()')
+            ul.pure-list-item
+                li(ng-repeat='x in my.item track by $index' ng-class='my.selectActive(x.id)') 
+                    h5(ng-click='my.select(x)') {{x.name}}
+                        span.pure-badges {{x.comments.length}}
+                        input.pure-button.pure-button-danger(type='button' value='Delete' ng-click='my.deleteItem(x.id)')
+    .pure-u-1.pure-u-md-1-2(ng-if='my.selected')
+        .pure-box-comments
+            h2 Comments # {{my.selected.id}}
+            .pure-comment-container
+                .pure-comment(ng-repeat='comment in my.selected.comments track by $index') 
+                    .grid-g
+                        .pure-u-1-5
+                            .pure-comment-img(ng-style="my.selectedStyle")
+                        .pure-u-4-5
+                            p {{comment.text}}
+            .pure-comment-add
+                .pure-u-1-5
+                    .pure-comment-img(ng-click='my.addComment(my.selected.id)')  
+                .pure-u-4-5
+                    textarea(ng-model='my.newComment')  

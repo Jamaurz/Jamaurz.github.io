@@ -1,0 +1,110 @@
+#main {
+    padding: 3%;
+    box-sizing: border-box;
+    h2 {
+        color: $h-color;
+        font-size: 1.8em;
+        line-height: 2em;
+        font-weight: 200;
+    }
+}
+
+.pure-box-item {
+    @extend .pure-box;
+    form {
+        input {
+            width: 100%;
+            margin-bottom: 2%;
+        }
+    }
+}
+.pure-box-comments {
+    @extend .pure-box;
+}
+.pure-comment-add {
+    margin-top: 4%;
+    .pure-comment-img {
+        background-color: $shadow-color;
+    }
+}
+.pure-comment {
+    border-bottom: 1px solid $shadow-color;
+    padding: 4% 0;  
+    p {
+        font-size: 0.8em;
+        color: $h-color;
+    }  
+}
+
+.pure-comment-add {
+    textarea {
+        width: 100%;
+        resize: none;
+    }
+    input {
+        width: 100%;
+    }
+}
+
+.pure-list-item {
+    li {
+        border-bottom: 1px solid $shadow-color;
+        line-height: 3em;
+        position: relative;
+        span {
+            margin-left: 3%;
+        }
+        input {
+            float: right;
+            margin-top: 0.4em;
+        }
+    }
+    h5 {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $tablet){
+    .pure-box-item {
+        margin-right: 2%;
+        form .pure-button {
+            margin-left: 4%;
+            width: 96%;
+        }
+    }
+    .pure-box-comments {
+        margin-left: 2%;
+    }
+
+    .pure-comment-img {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+
+    #main {
+        margin-left: 20%;
+        padding-right: -20%;
+    }
+    .pure-comment-add {
+        textarea {
+            height: 6.5vw;
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    .pure-box-item {
+        margin-bottom: 2%;
+    }
+
+    .pure-comment-img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .pure-comment-add {
+        textarea {
+            height: 20vw;
+        }
+    }
+}
